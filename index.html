@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo trabalhista</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-item">
+            <label for="horas">Valor por hora:</label>
+            <input id="valor-hora">
+        </div>
+    
+        <div class="form-item">
+            <label for="horas">Horas trabalhadas:</label>
+            <input id="horas">
+        </div>
+    
+        <div class="form-item">
+             <p>Vale transporte:</p>
+    
+             <div>
+                 <label for="sim">Sim</label>
+                <input type="radio" id="sim" name="vale-transporte" value="sim">
+             </div>
+             <div>
+                 <label for="nao">Não</label>
+                <input type="radio" id="nao" name="vale-transporte" value="nao" checked>
+             </div>
+        </div>
+
+        <div class="form-item">
+            <label for="deductions">Outras deduções:</label>
+            <input id="deductions">
+        </div>
+    
+        <div class="form-item">
+            <button onclick="calcularSalario()">Calcular</button>
+        </div>
+    </div>
+
+    <div class="result">
+        <h2>CÁLCULO TRABALHISTA</h2>
+
+        <p>Salário bruto: R$<span>0.00</span></p>
+        <p>Desconto INSS: R$<span>0.00</span></p>
+        <p>Desconto IRPF: R$<span>0.00</span></p>
+        <p>Desconto Vale Transporte: R$<span>0.00</span></p>
+        <p>Outras Deduções: R$<span>0.00</span></p>
+
+        <p id="totalVal">Salário líquido: R$<span id="salario-liquido">0.00</span></p>
+    </div>
+</body>
+
+</html>
